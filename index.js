@@ -92,7 +92,9 @@ function moveDodgerLeft() {
   var left = 0;
   
   function step() {
-    $('#dodger').style.left = '${left -= 4}px';
+    var myPosition = positionToInteger($('#dodger').style.left);
+    myPosition -= 4;
+    $('#dodger').style.left = `${myPosition}px`;
   }
   window.requestAnimationFrame(step);
 }
