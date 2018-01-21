@@ -79,17 +79,22 @@ function moveDodger(e) {
   if(e.which == 37){
     e.preventDefault();
     e.stopPropagation();
-    moveDodgerLeft();
+    moveDodgerLeft(e);
   }
   if(e.which == 39){
     e.preventDefault();
     e.stopPropagation();
-    moveDodgerRight();
+    moveDodgerRight(e);
   }
 }
 
-function moveDodgerLeft() {
+function moveDodgerLeft(e) {
+  var left = 0;
   
+  function step() {
+    e.style.left = '${top += 4}px';
+  }
+  window.requestAnimationFrame(step);
 }
 
 function moveDodgerRight() {
