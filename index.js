@@ -75,6 +75,8 @@ function endGame() {
 }
 
 function moveDodger(e) {
+  e.preventDefault();
+  e.stopPropagation();
   if(e.which == 37){
     moveDodgerLeft();
   }
