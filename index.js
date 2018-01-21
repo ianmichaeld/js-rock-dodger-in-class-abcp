@@ -75,7 +75,12 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  if(e.which == )
+  if(e.which == 37){
+    moveDodgerLeft();
+  }
+  if(e.which == 39){
+    moveDodgerRight();
+  }
 }
 
 function moveDodgerLeft() {
