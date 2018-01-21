@@ -88,11 +88,11 @@ function moveDodger(e) {
   }
 }
 
-function moveDodgerLeft(e) {
+function moveDodgerLeft() {
   var left = 0;
   
-  function step(e) {
-    e.style.left = '${top += 4}px';
+  function step() {
+    $('#dodger').style.left = '${left -= 4}px';
   }
   window.requestAnimationFrame(step);
 }
