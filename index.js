@@ -91,7 +91,7 @@ function moveDodger(e) {
 function moveDodgerLeft(e) {
   var left = 0;
   
-  function step() {
+  function step(e) {
     e.style.left = '${top += 4}px';
   }
   window.requestAnimationFrame(step);
