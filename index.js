@@ -104,8 +104,9 @@ function moveDodgerRight() {
   
   function step() {
     var myPosition = positionToInteger(DODGER.style.right);
-  
-    myPosition += 4;
+    if(myPosition <= 396){
+      myPosition += 4;
+    }
   
     DODGER.style.right = `${myPosition}px`;
   }
